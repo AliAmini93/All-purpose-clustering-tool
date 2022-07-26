@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         self.window.show()
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(459, 591)
+        MainWindow.resize(350, 591)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("post.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -205,8 +205,8 @@ class Ui_MainWindow(object):
         for i in range(I):
           for j in range(1, J):
             X1.append(dataset[i][j])
-        X1 = np.array(X1)
-        X1 = np.reshape(X1,(I,J-1))
+            
+        
         ###### Cause is_number func didn't support nan, we used isna from pandas    
         Isnan = pd.isna(X)    
         Res_nan = False
@@ -219,6 +219,8 @@ class Ui_MainWindow(object):
            if I>3:
                X = np.array(X)
                X = np.reshape(X,(I,J-2))
+               X1 = np.array(X1)
+               X1 = np.reshape(X1,(I,J-1))
                self.Log1.append("\nThe data format is ok.")
                self.X = X
                self.X1 = X1
