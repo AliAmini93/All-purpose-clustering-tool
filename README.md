@@ -1,4 +1,4 @@
-# All-purpose-clustering-tool
+# All Purpose Clustering Tool
 Clustering tool powered by ML algorithms.
 
 This is a Python program that uses pyqt5 to cluster data from excel files.
